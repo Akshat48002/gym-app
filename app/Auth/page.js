@@ -218,7 +218,7 @@ export default function AuthPage() {
               </button>
               <p className="text-sm text-center mt-4">Forgot password?</p>
               <p className="text-sm text-center mt-2">
-                Don't have an account?{" "}
+                Don&apos;t have an account?{" "}
                 <b
                   onClick={() => setMode("sign-up")}
                   className="text-red-500 cursor-pointer"
