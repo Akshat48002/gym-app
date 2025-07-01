@@ -23,7 +23,7 @@ const About = () => {
         </p>
 
         <p className="text-3xl md:text-4xl leading-snug font-semibold">
-          We're Functioning for Almost <span className="text-red-300">20</span> Years
+          We&apos;re Functioning for Almost <span className="text-red-300">20</span> Years
         </p>
 
         <p className="text-black/50 text-sm tracking-wide">
