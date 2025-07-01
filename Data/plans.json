@@ -1,0 +1,90 @@
+[
+  {
+    "name": "Basic Plan",
+    "price": 999,
+    "benefits": ["Gym Access", "Locker Facility"],
+    "color": "border-green-400",
+    "duration": {
+      "monthly": 999,
+      "threeMonths": 2799,
+      "sixMonths": 5299,
+      "yearly": 9999
+    }
+  },
+  {
+    "name": "Premium Plan",
+    "price": 1999,
+    "benefits": ["All Basic Benefits", "Personal Trainer", "Diet Consultation"],
+    "color": "border-yellow-400",
+    "duration": {
+      "monthly": 1999,
+      "threeMonths": 5599,
+      "sixMonths": 10499,
+      "yearly": 19999
+    }
+  },
+  {
+    "name": "Gold Plan",
+    "price": 2999,
+    "benefits": ["All Premium Benefits", "Spa Access", "Priority Support"],
+    "color": "border-red-400",
+    "duration": {
+      "monthly": 2999,
+      "threeMonths": 8399,
+      "sixMonths": 15999,
+      "yearly": 29999
+    }
+  },
+  {
+    "name": "Platinum Plan",
+    "price": 4999,
+    "benefits": [
+      "All Gold Benefits",
+      "24/7 Gym Access",
+      "Physiotherapy Sessions",
+      "Free Merchandise"
+    ],
+    "color": "border-blue-400",
+    "duration": {
+      "monthly": 4999,
+      "threeMonths": 13999,
+      "sixMonths": 26499,
+      "yearly": 49999
+    }
+  },
+  {
+    "name": "Elite Plan",
+    "price": 7999,
+    "benefits": [
+      "All Platinum Benefits",
+      "Dedicated Fitness Coach",
+      "Home Workout Setup Consultation",
+      "VIP Lounge Access",
+      "Health Check-ups"
+    ],
+    "color": "border-purple-500",
+    "duration": {
+      "monthly": 7999,
+      "threeMonths": 22499,
+      "sixMonths": 42999,
+      "yearly": 79999
+    }
+  },
+  {
+    "name": "Pro Boxer",
+    "color": "border-purple-400",
+    "benefits": [
+      "All Gold Benefits",
+      "Professional Boxing Training",
+      "Exclusive Ring Access",
+      "Custom Diet & Performance Plan",
+      "VIP Event Invitations"
+    ],
+    "duration": {
+      "monthly": 4999,
+      "quarterly": 14000,
+      "halfYearly": 27000,
+      "yearly": 52000
+    }
+  }
+]
