@@ -19,6 +19,7 @@ import {
   MessageSquare,
 } from "lucide-react";
 import plans from "@/Data/plans.json";
+import Image from "next/image";
 
 const BillingSectionPage = () => {
   const [bills, setBills] = useState([]);
@@ -167,10 +168,12 @@ const BillingSectionPage = () => {
             <div className="bg-white p-4 md:p-6 rounded-xl shadow space-y-4">
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                 <div className="flex items-center gap-4">
-                  <img
+                  <Image
                     src={selectedMember.image || "/img1.jpg"}
                     alt="profile"
-                    className="w-16 h-16 rounded-full object-cover border shadow"
+                    width={64}
+                    height={64}
+                    className="rounded-full object-cover border shadow"
                   />
                   <div>
                     <h3 className="text-lg md:text-xl font-bold">
