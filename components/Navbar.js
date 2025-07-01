@@ -90,12 +90,25 @@ const Navbar = () => {
           {["Home", "About", "Contact", "Blog", "Gallery","Diets","Nutrition", "Membership"].map(
             (item) => (
               <li key={item}>
-                <Link
-                  href={item === "Membership" ? "/Membership" : `/#${item}`}
-                  className="text-lg font-semibold"
+               {item === "Membership" ? (
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (!user) {
+                      router.push("/Auth");
+                    } else {
+                      router.push("/Membership");
+                    }
+                  }}
+                  className="text-lg font-semibold cursor-pointer hover:text-red-400 transition"
                 >
                   {item}
+                </a>
+              ) : (
+                <Link href={`/#${item}`} className="text-lg font-semibold">
+                  {item}
                 </Link>
+              )}
               </li>
             )
           )}
