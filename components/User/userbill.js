@@ -1,5 +1,5 @@
 import { db } from "@/services/firebase";
-import { collection, doc, getDocs, query, updateDoc, where } from "firebase/firestore";
+import { collection, doc, getDocs, query, updateDoc, where,addDoc } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { CheckCircle, Wallet, Calendar, AlertCircle, ReceiptText } from "lucide-react";
 
@@ -33,10 +33,19 @@ const UserBill = ({ email }) => {
     }
   };
 
-  const markAsPaid = async (billId) => {
+  const markAsPaid = async (bill) => {
     try {
-      const billRef = doc(db, "members", memberId, "bills", billId);
+      const billRef = doc(db, "members", memberId, "bills", bill.id);
       await updateDoc(billRef, { status: "paid" });
+      console.log("Bill marked as paid:", bill.id);
+      await addDoc(collection(db, "notifications"), {
+        title: "Payment Received",
+        message: `${email} has paid ₹${bill.amount} for their gym bill.`,
+        timestamp: new Date(),
+        type: "payment",
+        read: false,
+      });
+
       fetchBill();
     } catch (error) {
       console.error("Error marking bill as paid:", error.message);
@@ -87,7 +96,7 @@ const UserBill = ({ email }) => {
             </div>
 
             <button
-              onClick={() => markAsPaid(bill.id)}
+              onClick={() => markAsPaid(bill)}
               className="w-full flex justify-center items-center gap-2 py-3 bg-green-500 hover:bg-green-600 text-white rounded-full transition active:scale-95"
             >
               <CheckCircle size={18} /> Pay Now
